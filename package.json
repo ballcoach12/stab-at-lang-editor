@@ -1,0 +1,41 @@
+{
+  "name": "stab-at-lang-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:all": "npm run clean && npm run build:prepare && npm run build:copy",
+    "clean": "rimraf ./dist",
+    "build:prepare": "shx mkdir -p ./dist",
+    "build:copy": "npm run build --workspaces && npm run copy:language-workers",
+    "copy:language-workers": "shx cp -fr ./node_modules/monaco-editor-wrapper/bundle ./dist/monaco-editor-wrapper"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/hello-world",
+    "packages/hello-world-lit",
+    "packages/wrapper"
+  ],
+  "dependencies": {
+    "@rollup/plugin-inject": "^5.0.3",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "generator-langium": "^2.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-inject": "^5.0.3",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "browserify-zlib": "^0.2.0",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "promisify": "^0.0.3",
+    "punycode": "^1.4.1",
+    "rollup-plugin-typescript-paths": "^1.4.0",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "vite-plugin-node-polyfills": "^0.9.0"
+  }
+}
