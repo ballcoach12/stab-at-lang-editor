@@ -10,33 +10,15 @@ This project uses an `npm` workspace.  The projects contained in the workspace a
 
 A small Langium language server/editor project that implements a simple "HelloWorld" grammar.  When you build this project, it is configured to produce a web worker that can be used in the browser to move the language server from a Node backend into the browser itself, eliminating the need for a server-based language server.
 
-### `wrapper`
+### `wrapper-js-html`
 
-The initial stab at making the `hello-world` language editor available outside the original `hello-world` project itself. This will form the basis for the eventual Lit component that provides the editor and language server to the browser.
+A reconstitution of the example shown [here](https://github.com/TypeFox/monaco-components/blob/main/packages/examples/verify_wrapper.html). 
+
+### `wrapper-js-code`
+
+A reconstitution of the example shown [here](https://github.com/TypeFox/monaco-components/blob/main/packages/examples/src/wrapperTs.ts)
 
 ### `hello-world-lit`
 
-The eventual Lit component project.
+The eventual Lit component project that will wrap the `hello-world` language.
 
-## Building  the parent package
-
-```
-cd stab-at-lang-editor
-npm run clean
-npm run build:all
-```
-
-## Running the wrapper in the browser
-
-**Be sure to build the parent package first**
-```
-cd stab-at-lang-editor/packages/wrapper
-npm run dev
-```
-## Running only the langugage editor and server in the browser
-
-```
-cd stab-at-lang-editor/packages/hello-world
-npm run buildall
-npm run serve
-```
