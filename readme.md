@@ -4,7 +4,7 @@ This project is a prototype for running an editor and language server, that was 
 
 ## Project Structure
 
-This project uses an `npm` workspace.  The projects contained in the workspace are in the `packages` folder. The project consists of:
+The project consists of:
 
 ### `hello-world`
 
