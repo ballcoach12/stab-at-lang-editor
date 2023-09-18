@@ -9,10 +9,10 @@ export default defineConfig({
     resolve: {
         alias: {
 
-            util: 'rollup-plugin-node-polyfills/polyfills/util',
+            //util: 'rollup-plugin-node-polyfills/polyfills/util',
             path: 'path-browserify',
             //path: 'rollup-plugin-node-polyfills/polyfills/path',
-            stream: 'rollup-plugin-node-polyfills/polyfills/stream',
+           // stream: 'rollup-plugin-node-polyfills/polyfills/stream',
         }
 
     },

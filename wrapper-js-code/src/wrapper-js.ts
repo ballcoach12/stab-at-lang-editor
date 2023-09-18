@@ -17,10 +17,10 @@ let code = `function sayHello(): string {
     return "Hello";
 };`;
 
-//const codeOriginalUri = '/tmp/goodbye.ts';
-let codeOriginal = `function sayGoodbye(): string {
-    return "Goodbye";
-};`;
+// const codeOriginalUri = '/tmp/goodbye.ts';
+// let codeOriginal = `function sayGoodbye(): string {
+//     return "Goodbye";
+// };`;
 
 const monacoEditorConfig = {
     glyphMargin: true,
@@ -46,7 +46,6 @@ const userConfig: UserConfig = {
             languageId: 'typescript',
             code: code,
             codeUri: codeUri,
-            codeOriginal: codeOriginal,
             useDiffEditor: false,
             editorOptions: monacoEditorConfig,
             diffEditorOptions: monacoEditorConfig
