@@ -16,7 +16,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     // Enable project compilation
-    //"composite": true,
+    "composite": true,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -29,7 +29,7 @@
     "noImplicitReturns": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "outDir": "public",
+    "outDir": "dist",
      // Skip type checking of declaration files.
     "skipLibCheck": true,
      // Disallow inconsistently-cased references to the same file
@@ -42,12 +42,10 @@
   "include": [
     "**/src/**/*.ts",
     "**/src/**/*.js",
-    "**/libs/*.ts"
     
   ],
   "exclude": [
     "**/node_modules/**/*",
     "**/dist/**/*",
-    "**/libs/**/src/**/*"
   ]
 }

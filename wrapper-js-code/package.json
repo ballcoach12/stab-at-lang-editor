@@ -4,23 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "clean": "shx rm -rf ./dist ./libs *.tsbuildinfo",
+    "clean": "shx rm -rf ./dist *.tsbuildinfo",
     "compile": "tsc --build tsconfig.json",
     "dev": "vite",
     "dev:debug": "vite --debug --force",
     "build": "npm run clean && npm run build:vite",
-    "build:vite": "tsc --build tsconfig.json && vite build -- no-bundle",
-    "preview": "vite preview"
+    "build:vite": "tsc --build tsconfig.json && vite build",
+    "preview": "vite preview",
+    "postinstall": "monaco-treemending"
   },
   "dependencies": {
-    "@codingame/monaco-vscode-api": "^1.81.7",
     "monaco-editor-workers": "^0.43.0",
     "monaco-editor-wrapper": "^3.0.1",
-    "monaco-languageclient": "^6.4.6",
     "vite-plugin-node-polyfills": "^0.14.1",
-    "vscode-languageclient": "~8.1.0",
-    "vscode-languageserver": "~8.1.0",
-    "vscode-uri": "~3.0.7"
+    "vscode-languageclient": "^8.1.0"
   },
   "devDependencies": {
     "@types/node": "~18.17.5",
