@@ -1,6 +1,4 @@
-//import  { ModelUpdate, MonacoEditorLanguageClientWrapper, UserConfig }  from '../libs/monaco-editor-wrapper/bundle/index.js'
-import { ModelUpdate, MonacoEditorLanguageClientWrapper, UserConfig } from 'monaco-editor-wrapper'
-//import { ModelUpdate, MonacoEditorLanguageClientWrapper, UserConfig } from 'monaco-editor-wrapper/bundle';
+import { ModelUpdate, MonacoEditorLanguageClientWrapper, UserConfig } from '../libs/monaco-editor-wrapper/dist/index.js'
 import { languages } from 'monaco-editor';
 
 export const wrapper = new MonacoEditorLanguageClientWrapper();
@@ -11,7 +9,6 @@ export const startEditor = async (userConfig: UserConfig, code: string, codeOrig
         return;
     }
     configureCodeEditors(userConfig, code, codeOriginal);
-    //toggleSwapDiffButton(true);
     await restartEditor(userConfig);
 };
 

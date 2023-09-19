@@ -16,7 +16,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     // Enable project compilation
-    "composite": true,
+    "composite": false,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -42,7 +42,7 @@
   "include": [
     "**/src/**/*.ts",
     "**/src/**/*.js",
-    
+    "**/libs/**/*.ts"
   ],
   "exclude": [
     "**/node_modules/**/*",
