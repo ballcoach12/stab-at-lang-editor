@@ -13,7 +13,6 @@ let code = `function sayHello(): string {
     return "Hello";
 };`;
 
-//const codeOriginalUri = '/tmp/goodbye.ts';
 let codeOriginal = `function sayGoodbye(): string {
     return "Goodbye";
 };`;

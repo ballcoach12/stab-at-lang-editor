@@ -16,9 +16,7 @@
   "dependencies": {
     "monaco-editor-workers": "^0.43.0",
     "monaco-editor-wrapper": "^3.0.1",
-    "vite-plugin-node-polyfills": "^0.14.1",
-    "vscode-languageclient": "^8.1.0",
-    "vscode": "npm:@codingame/monaco-vscode-api@~1.81.7"
+    "vscode-languageclient": "^8.1.0"
   },
   "devDependencies": {
     "@types/node": "~18.17.5",

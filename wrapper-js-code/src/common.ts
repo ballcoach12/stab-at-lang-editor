@@ -1,4 +1,4 @@
-import { ModelUpdate, MonacoEditorLanguageClientWrapper, UserConfig } from '../libs/monaco-editor-wrapper/dist/index.js'
+import { ModelUpdate, MonacoEditorLanguageClientWrapper, UserConfig } from 'monaco-editor-wrapper'
 import { languages } from 'monaco-editor';
 
 export const wrapper = new MonacoEditorLanguageClientWrapper();
