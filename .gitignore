@@ -1,3 +1,4 @@
 node_modules
 public
 hello-world/public/*
+hello-world/public/*.js

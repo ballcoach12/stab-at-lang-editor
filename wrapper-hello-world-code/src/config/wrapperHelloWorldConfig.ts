@@ -1,5 +1,5 @@
 import { UserConfig } from 'monaco-editor-wrapper';
-//import { loadHelloWorldWorker } from '../wrapper-hello-world.js';
+import { HelloWorldMonarchContent, LangiumTheme } from './helloworld.monarch.js';
 
 
 
@@ -25,11 +25,13 @@ export const createHelloWorldGlobalConfig = async (htmlElement: HTMLElement, cod
     
     return {
         htmlElement: htmlElement,
+        loggerConfig: {
+            enabled: true,
+            debugEnabled: true
+        },
         wrapperConfig: {
             serviceConfig: {
-                enableThemeService: true,
-                enableTextmateService: true,
-                enableModelService: true,
+               enableModelService: true,
                 configureEditorOrViewsService: {
                 },
                 configureConfigurationService: {
@@ -42,8 +44,15 @@ export const createHelloWorldGlobalConfig = async (htmlElement: HTMLElement, cod
             editorAppConfig: {
                 $type: 'classic',
                 languageId: 'helloworld',
+                theme: 'langium-theme',
                 code: code,
                 useDiffEditor: false,
+                editorOptions: {
+                    'semanticHighlighting.enabled': true
+                },
+                languageExtensionConfig: { id: 'langium' },
+                languageDef: HelloWorldMonarchContent,
+                themeData: LangiumTheme,
                 extension: {
                     name: 'langium-example',
                     publisher: 'monaco-languageclient-project',
@@ -72,11 +81,7 @@ export const createHelloWorldGlobalConfig = async (htmlElement: HTMLElement, cod
                 },
                 extensionFilesOrContents: extensionFilesOrContents,
                 userConfiguration: {
-                    json: `{
-    "workbench.colorTheme": "Default Dark Modern",
-    "editor.guides.bracketPairsHorizontal": "active",
-    "editor.lightbulb.enabled": true
-}`
+                    json: '{}'
                 }
             }
         },
