@@ -10,15 +10,65 @@ The project consists of:
 
 A small Langium language server/editor project that implements a simple "HelloWorld" grammar.  When you build this project, it is configured to produce a web worker that can be used in the browser to move the language server from a Node backend into the browser itself, eliminating the need for a server-based language server.
 
-### `wrapper-js-html`
+To build:
 
-A reconstitution of the example shown [here](https://github.com/TypeFox/monaco-components/blob/main/packages/examples/verify_wrapper.html). 
-
-### `wrapper-js-code`
-
-A reconstitution of the example shown [here](https://github.com/TypeFox/monaco-components/blob/main/packages/examples/src/wrapperTs.ts)
+```
+cd hello-world
+npm run buildall
+``````
 
 ### `hello-world-lit`
 
 The eventual Lit component project that will wrap the `hello-world` language.
+
+### `wrapper-js-html`
+
+A reconstitution of the example shown [here](https://github.com/TypeFox/monaco-components/blob/main/packages/examples/verify_wrapper.html). This project uses Vite for building and bundling.
+
+To build:
+
+```
+cd wrapper-js-html
+npm run build
+```
+
+To serve:
+
+```
+npm run dev
+```
+
+### `wrapper-hello-world-code`
+
+Demonstrates the use of code to initialize an editor using resources created from the `hello-world` project.  These resources are manually copied into folders for use at runtime. 
+
+To build:
+
+```
+cd wrapper-hello-world-code
+npm run build
+```
+
+To serve:
+
+```
+npm run dev
+```
+
+### `wrapper-js-code`
+
+A reconstitution of the example shown [here](https://github.com/TypeFox/monaco-components/blob/main/packages/examples/src/wrapperTs.ts). This project uses Vite for building and bundling.
+
+To build:
+
+```
+cd wrapper-js-code
+npm run build
+```
+
+To serve:
+
+```
+npm run dev
+```
 
