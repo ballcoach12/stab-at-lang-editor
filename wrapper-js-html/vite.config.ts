@@ -3,9 +3,9 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import { readFileSync } from 'fs';
 
 export default defineConfig({
-    plugins: [
-        nodePolyfills()
-    ],
+    // plugins: [
+    //     nodePolyfills()
+    // ],
     resolve: {
         alias: {
 
