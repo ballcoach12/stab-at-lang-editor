@@ -21,6 +21,8 @@ npm run buildall
 
 A Lit component project that wraps the `hello-world` language.
 
+**This project is still needing CSS work, but implements the basic functionality**
+
 To build:
 
 ```
