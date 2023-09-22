@@ -1,15 +1,18 @@
 {
-  "name": "hello-world-lit",
+  "name": "monaco-editor-lit",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "clean": "shx rm -rf ./dist *.tsbuildinfo",
     "dev": "vite",
-    "build": "tsc --build tsconfig.json && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "postinstall": "monaco-treemending"
   },
   "dependencies": {
-    "lit": "^2.7.6",
+    "vscode":"npm:@codingame/monaco-vscode-api@~1.81.7",
+    "lit": "^2.8.0",
     "monaco-editor-workers": "^0.43.0",
     "monaco-editor-wrapper": "^3.0.1",
     "vscode-languageclient": "^8.1.0"
@@ -33,9 +36,5 @@
     "vite-node": "~0.34.3",
     "vitest": "~0.34.3",
     "webdriverio": "~8.16.4"
-  },
-  "main": "index.js",
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }

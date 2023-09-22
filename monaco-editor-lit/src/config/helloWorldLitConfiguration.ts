@@ -1,6 +1,8 @@
 import { UserConfig } from 'monaco-editor-wrapper';
 import { HelloWorldMonarchContent, LangiumTheme } from './helloworld.monarch.js';
 
+
+
 export const loadHelloWorldWorker = () => {
     const workerUrl = new URL('../src/worker/hello-world-server-worker.js', window.location.href);
     console.log(`Hello World worker URL: ${workerUrl}`);
