@@ -17,9 +17,22 @@ cd hello-world
 npm run buildall
 ``````
 
-### `hello-world-lit`
+### `hello-world-editor-lit`
 
-The eventual Lit component project that will wrap the `hello-world` language.
+A Lit component project that wraps the `hello-world` language.
+
+To build:
+
+```
+cd hello-world-editor-lit
+npm run build
+``````
+
+To serve:
+
+```
+npm run dev
+```
 
 ### `wrapper-js-html`
 

@@ -11,12 +11,12 @@ buildWorkerDefinition('../node_modules/monaco-editor-workers/dist/workers', impo
 const wrapper = new MonacoEditorLanguageClientWrapper();
 
 const code = 'hello Bob!';
-const startEditor = async () => {
+const startEditor = async (parentNode: HTMLElement) => {
   if (wrapper.isStarted()) {
       alert('Editor was already started!');
       return;
   }
-  const helloWorldGlobalConfig = await createHelloWorldGlobalConfig(document.getElementById('monaco-editor-root') as HTMLElement, code);
+  const helloWorldGlobalConfig = await createHelloWorldGlobalConfig(parentNode, code);
   await wrapper.start(helloWorldGlobalConfig);
   vscode.commands.getCommands().then((x) => {
       console.log('Currently registered # of vscode commands: ' + x.length);
@@ -29,8 +29,8 @@ const startEditor = async () => {
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('monaco-editor-lit')
-export class MonacoEditorLit extends LitElement {
+@customElement('hello-world-editor-lit')
+export class HelloWorldEditorLit extends LitElement {
   
   private wrapper: MonacoEditorLanguageClientWrapper = new MonacoEditorLanguageClientWrapper();
   private containerElement?: HTMLDivElement;
@@ -44,9 +44,11 @@ static override styles = css`
             --editor-width: 100%;
             --editor-height: 100%;
         }
-        main {
+        #monaco-editor-root {
             width: var(--editor-width);
             height: var(--editor-height);
+            width: 500px;
+            height: 500px;
         }
     `;
   
@@ -55,7 +57,7 @@ static override styles = css`
     protected override firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
       try {
         console.log('starting editor');
-        startEditor();
+        startEditor(this.renderRoot.querySelector('#monaco-editor-root') as HTMLElement );
       }
       catch(e) {
         console.error(e);
@@ -64,7 +66,6 @@ static override styles = css`
   override render() {
     return html`
     <div id="monaco-editor-root" style="height: 80vh;"></div>
-    <script type="module" src="./src/helloWorldWrapperLit.ts"></script>
     `
   }
 
@@ -75,6 +76,6 @@ static override styles = css`
 
 declare global {
   interface HTMLElementTagNameMap {
-    'monaco-editor-lit': MonacoEditorLit
+    'hello-world-editor-lit': HelloWorldEditorLit
   }
 }
