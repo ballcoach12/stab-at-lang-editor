@@ -37,7 +37,9 @@
     "noImplicitOverride": true,
     "jsx": "react",
     "experimentalDecorators": true,
-    "allowJs": true
+    "allowJs": true,
+    
+    "useDefineForClassFields": false, // see https://lit.dev/docs/components/decorators/#decorators-typescript
   },
   "include": [
     "**/src/**/*.ts",

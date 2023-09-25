@@ -31,6 +31,7 @@ export const HelloWorldMonarchContent = {
 };
 
 export const LangiumTheme = {
+    //base: 'vs',
     base: 'vs-dark',
     inherit: true,
     rules: [],

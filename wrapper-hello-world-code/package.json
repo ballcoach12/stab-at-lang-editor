@@ -14,6 +14,7 @@
     "postinstall": "monaco-treemending"
   },
   "dependencies": {
+    "lit": "^2.8.0",
     "monaco-editor-workers": "^0.43.0",
     "monaco-editor-wrapper": "^3.0.1",
     "monaco-languageclient": "^6.4.6",

@@ -5,11 +5,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monaco Editor Wrapper Hello World Example</title>
+    <script type="module" src="./index.ts"></script>
+    <script type="module" src="./src/code-editor.ts"></script>
+    <style>
+        body {
+            height:100vh;
+            margin:0;
+        }
+        #main {
+            display:grid;
+            grid-template-columns: 200px 1fr;
+            height:100%;
+            width:100%;
+        }
+        #left {background:#dadada;}
+        #right {position:relative}
+    </style>
 </head>
 
 <body>
-    <div id="monaco-editor-root" style="height: 80vh;"></div>
-    <script type="module" src="./src/wrapper-hello-world.ts"></script>
+    <!-- <div id="monaco-editor-root" style="height: 80vh;"></div>
+    <script type="module" src="./src/wrapper-hello-world.ts"></script> -->
+    <div id="main">
+        <div id="left">
+            <div>A file tree</div>
+            <div id="toggle-theme-btn">Toggle Theme</div>
+        </div>
+        <div id="right">
+            <code-editor id="code-editor" filetype="bob"></code-editor>
+        </div>
+    </div>
 </body>
 
 </html>
