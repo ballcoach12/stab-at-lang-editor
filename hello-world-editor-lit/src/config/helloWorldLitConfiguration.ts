@@ -22,7 +22,7 @@ export const createHelloWorldGlobalConfig = async (htmlElement: HTMLElement, cod
     extensionFilesOrContents.set('/hello-world-grammar.json', helloWorldTm);
 
     const helloWorldWorker = loadHelloWorldWorker();
-    
+
     return {
         htmlElement: htmlElement,
         loggerConfig: {
@@ -31,7 +31,7 @@ export const createHelloWorldGlobalConfig = async (htmlElement: HTMLElement, cod
         },
         wrapperConfig: {
             serviceConfig: {
-               enableModelService: true,
+                enableModelService: true,
                 configureEditorOrViewsService: {
                 },
                 configureConfigurationService: {
@@ -50,9 +50,9 @@ export const createHelloWorldGlobalConfig = async (htmlElement: HTMLElement, cod
                 editorOptions: {
                     'semanticHighlighting.enabled': true
                 },
-               languageExtensionConfig: { id: 'langium' },
-               languageDef: HelloWorldMonarchContent,
-               themeData: LangiumTheme,                
+                languageExtensionConfig: { id: 'langium' },
+                languageDef: HelloWorldMonarchContent,
+                themeData: LangiumTheme,
             }
         },
         languageClientConfig: {
